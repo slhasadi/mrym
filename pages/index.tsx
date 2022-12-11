@@ -12,6 +12,7 @@ const player = () => {
 };
 export default function Home() {
   useEffect(() => {
+    // @ts-ignore
     document.querySelector("audio").play();
   }, []);
   return (
