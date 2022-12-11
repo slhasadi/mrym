@@ -16,7 +16,6 @@ export default function Home() {
         autoPlay
         src="musics/s.mp3"
         onPlay={(e) => console.log("onPlay")}
-        // other props here
       />
       <div className={styles.container}>
         <div className="wrapper">
