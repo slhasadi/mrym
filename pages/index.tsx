@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import ReactAudioPlayer from "react-audio-player";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
+// import 'react-h5-audio-player/lib/styles.less' Use LESS
+// import 'react-h5-audio-player/src/styles.scss' Use SASS
 
 const player = () => {
   <></>;
@@ -9,7 +12,12 @@ const player = () => {
 export default function Home() {
   return (
     <>
-      <ReactAudioPlayer src="/musics/s.mp3" autoPlay controls />
+      <AudioPlayer
+        autoPlay
+        src="musics/s.mp3"
+        onPlay={(e) => console.log("onPlay")}
+        // other props here
+      />
       <div className={styles.container}>
         <div className="wrapper">
           <div className="border-circle" id="one"></div>
