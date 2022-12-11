@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
+import { useEffect } from "react";
 // import 'react-h5-audio-player/lib/styles.less' Use LESS
 // import 'react-h5-audio-player/src/styles.scss' Use SASS
 
@@ -10,13 +11,12 @@ const player = () => {
   <></>;
 };
 export default function Home() {
+  useEffect(() => {
+    document.querySelector("audio").play();
+  }, []);
   return (
     <>
-      <AudioPlayer
-        autoPlay
-        src="musics/s.mp3"
-        onPlay={(e) => console.log("onPlay")}
-      />
+      <audio src="musics/s.mp3" />
       <div className={styles.container}>
         <div className="wrapper">
           <div className="border-circle" id="one"></div>
